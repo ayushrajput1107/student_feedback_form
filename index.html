@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Feedback Form</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="form-header">
+            <h1>Student Feedback Form</h1>
+            <p>We value your feedback. Please share your experience with us.</p>
+        </div>
+
+        <form id="feedbackForm">
+
+            <!-- Student Information -->
+            <h2>Student Information</h2>
+
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required
+                >
+                <small class="error" id="nameError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+                <small class="error" id="emailError"></small>
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="course">Course</label>
+                    <select id="course" name="course" required>
+                        <option value="">Select Course</option>
+                        <option value="BCA">BCA</option>
+                        <option value="BBA">BBA</option>
+                        <option value="B.Tech">B.Tech</option>
+                        <option value="MCA">MCA</option>
+                        <option value="MBA">MBA</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="semester">Semester</label>
+                    <select id="semester" name="semester" required>
+                        <option value="">Select Semester</option>
+                        <option value="1">1st Semester</option>
+                        <option value="2">2nd Semester</option>
+                        <option value="3">3rd Semester</option>
+                        <option value="4">4th Semester</option>
+                        <option value="5">5th Semester</option>
+                        <option value="6">6th Semester</option>
+                        <option value="7">7th Semester</option>
+                        <option value="8">8th Semester</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <!-- Feedback -->
+            <h2>Course Feedback</h2>
+
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    placeholder="Enter subject name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label>How would you rate the course?</label>
+
+                <div class="rating">
+                    <label>
+                        <input type="radio" name="rating" value="1" required>
+                        <span>1</span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="rating" value="2">
+                        <span>2</span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="rating" value="3">
+                        <span>3</span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="rating" value="4">
+                        <span>4</span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="rating" value="5">
+                        <span>5</span>
+                    </label>
+                </div>
+
+                <div class="rating-labels">
+                    <span>Poor</span>
+                    <span>Excellent</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="teaching">How would you rate the teaching?</label>
+
+                <select id="teaching" name="teaching" required>
+                    <option value="">Select Rating</option>
+                    <option value="Excellent">Excellent</option>
+                    <option value="Good">Good</option>
+                    <option value="Average">Average</option>
+                    <option value="Poor">Poor</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="content">How was the course content?</label>
+
+                <select id="content" name="content" required>
+                    <option value="">Select Option</option>
+                    <option value="Excellent">Excellent</option>
+                    <option value="Good">Good</option>
+                    <option value="Average">Average</option>
+                    <option value="Poor">Poor</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Additional Comments</label>
+
+                <textarea
+                    id="comments"
+                    name="comments"
+                    rows="5"
+                    placeholder="Write your feedback here..."
+                ></textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label>
+                    <input type="checkbox" id="anonymous" name="anonymous">
+                    Submit feedback anonymously
+                </label>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                Submit Feedback
+            </button>
+
+            <button type="reset" class="reset-btn">
+                Clear Form
+            </button>
+
+        </form>
+
+        <!-- Success Message -->
+        <div id="successMessage" class="success-message">
+            <div class="success-icon">✓</div>
+            <h2>Thank You!</h2>
+            <p>Your feedback has been submitted successfully.</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Student Feedback System</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
